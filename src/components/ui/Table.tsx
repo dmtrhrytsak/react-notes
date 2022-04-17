@@ -39,6 +39,14 @@ const TableHead = ({ children }: Props) => {
   return <thead className="bg-gray-100">{children}</thead>;
 };
 
+const TableWrapper = ({ children }: Props) => {
+  return (
+    <div className="relative">
+      <div className="overflow-x-auto">{children}</div>
+    </div>
+  );
+};
+
 const Table = ({ children }: Props) => {
   return <table className="w-full bg-gray-200">{children}</table>;
 };
@@ -49,5 +57,6 @@ Table.HeadCell = TableHeadCell;
 Table.Body = TableBody;
 Table.Row = TableRow;
 Table.RowCell = TableRowCell;
+Table.Wrapper = TableWrapper;
 
 export default Table;
